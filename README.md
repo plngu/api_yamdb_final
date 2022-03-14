@@ -13,7 +13,7 @@ api_yamdb
 
 ### Authors
 
-Evgeny Asminin, Panchanko Alexey, Akexander Shornikov
+Evgeny Asminin, Panchenko Alexey, Alexandr Shornikov
 
 ### Installation Notes:
 
