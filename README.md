@@ -1,67 +1,56 @@
 # api_yamdb
-api_yamdb
+Проект YaMDb собирает отзывы пользователей на произведения
 
-### RestAPI based resource where you can score Titles
+### Возможности:
 
-### Features:
+- Запросы от пользователей с различными ролями: анонимный пользователь, зарегистрированный пользователь, модератор, администратор;
+- Пользователи могут создавать и редактировать отзывы и оценивать произведения, на основе оценок пользователей рассчитывается средний рейтинг произведения;
+- Аутентификация по JWT-токену.
 
-- users can create account (Anonym, Regular user, Moderator, admin)
-- users can create and edit reviews and evaluate Titles
-- based on user's scores sustem calculate rating of the Title
-- users must work with App only via RestAPI
+### Авторы
 
+Евгений Асминин, Алексей Панченко, Александр Шорников
 
-### Authors
+### Установка (Windows):
 
-Evgeny Asminin, Panchenko Alexey, Alexandr Shornikov
-
-### Installation Notes:
-
-Clone repo and change directory:
+Клонировать репозиторий:
 
 ```
-git clone https://github.com/plngu/api_yamdb.git
+git clone https://github.com/plngu/api_yamdb_final.git
+cd api_yamdb_final
 ```
 
-```
-cd api_yamdb
-```
-
-Create and activate venv:
+Создать и активировать виртуальное окружение:
 
 ```
-python3 -m venv env
+python -m venv venv
 ```
 
 ```
-source env/bin/activate
+source venv/Scripts/activate
 ```
 
-Upgrade pip if necessary:
 
-```
-python3 -m pip install --upgrade pip
-```
-
-Deploy venv according to requirements.txt:
+Загрузить зависимости из requirements.txt:
 
 ```
 pip install -r requirements.txt
 ```
 
-Deploy migrations:
+Выполнить миграции:
 
 ```
-python3 manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 ```
 
-Launch project server:
+Запустить проект:
 
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
 
-API documentation available in [ReDoc](https://redocly.github.io/redoc/#operation/addPet) on endpoint:
+Примеры доступных энедпоинтов [ReDoc](https://redocly.github.io/redoc/#operation/addPet):
 
 ```
 http://127.0.0.1:8000/redoc/
